@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooping Carts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #ddd;">
+        <div class="left-header">
+            <a href="index.html" class="logo" style="font-size: 1.3rem;">Online Shopping </a>     
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-secondary" style="font-size: 1.5rem;"></i> 
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <div class="userName" style="margin-left: 50%; transform: translate(-150%);">
+                    <p style="margin-bottom: 0;">Welcome <span id="user"></span></p>
+                 </div>
+          <div class="right-header ml-auto">
+                <div class="user d-flex">
+                    <div class="cart-box">
+                        <div class="cart-btn" onclick="cartBtn()">
+                            <i class="fas fa-shopping-cart"></i>
+                            &nbsp;&nbsp;
+                            <span> Cart </span>
+                            <span id="number"></span> 
+                            <i class="fas fa-caret-down arrow" id="arrow"></i>
+                        </div>
+                            <div class="cart  ">
+                                <ul id="favouriteItems">
+                                    
+                                </ul>
+                                <a href="Cartproducts.html" id="view" onclick="viewProduct()">View all product</a>
+                            </div>
+                    </div> 
+                </div>
+                <div class="logout-box">
+                    <a href="#" class="logout">logout</a>
+                </div>
+        </div> 
+        </div>
+    </nav>
+    <div class="container mt-5 ">
+        <div class="row ">
+            <div class="col">
+                <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                <select class="form-select" id="autoSizingSelect">
+                  <option value="1">Search By Name </option>
+                  <option value="2">Serch By Category</option>
+                </select>
+            </div>
+            <div class="col">
+                <input type="search" onkeyup="searchProduct(this.value)" class="form-control" placeholder="search by " >
+            </div>
+        </div>
+   </div>
+    <section class="home mt-5">
+     <div class="container me-5 ">
+        <div class="row   me">
+           
+           <!-- <i class="fas fa-plus-circle"></i> -->
+         
+        </div>
+           
+     </div>
+       
+    </section>   
+
+    <script src="./JS/register.js"></script>
+    <script src="./JS/script.js"></script>
+    <script src="./JS/user.js"></script>
+    <script src="./JS/bootstrap.min.js"></script>
+</body>
+</html>

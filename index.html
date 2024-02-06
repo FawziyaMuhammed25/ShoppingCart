@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooping Carts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+         <div class="header-content">
+             <a href="index.html" class="brand text-info"> online shopping</a>
+             <nav>
+                
+                 <ul id="link">
+                    <li>
+                        <a href="login.html"> login </a>
+                    </li>
+                    <li>
+                        <a href="register.html">Register</a>
+                    </li>
+                </ul>
+             </nav>
+         </div>
+        </div>
+    </header> 
+    <div class="container mt-5 ">
+        <div class="row ">
+            <div class="col">
+                <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                <select class="form-select" id="autoSizingSelect">
+                  <option value="1">Search By Name </option>
+                  <option value="2">Serch By Category</option>
+                </select>
+            </div>
+            <div class="col">
+                <input type="search" onkeyup="searchProduct(this.value)" class="form-control" placeholder="search by " >
+            </div>
+        </div>
+   </div>
+    <section class="home mt-5">
+     <div class="container me-5 ">
+        <div class="row  me">
+           
+               
+         
+        </div>
+           
+     </div>
+       
+    </section>   
+
+    <script src="./JS/register.js"></script>
+    <script src="./JS/script.js"></script>
+    <script src="./JS/user.js"></script>
+    <script src="./JS/bootstrap.min.js"></script>
+</body>
+</html>

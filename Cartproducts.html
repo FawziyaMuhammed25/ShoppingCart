@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooping Carts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+</head>
+<body>
+    
+  <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #ddd;">
+    <div class="left-header">
+        <a href="index.html" class="logo" style="font-size: 1.3rem;">Online Shopping </a>     
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-secondary" style="font-size: 1.5rem;"></i> 
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <div class="userName" style="margin-left: 50%; transform: translate(-150%);">
+                <p style="margin-bottom: 0;">Welcome <span id="user-name"></span></p>
+             </div>
+      <div class="right-header ml-auto">
+            
+            <div class="logout-box">
+                <a href="#" class="logout">logout</a>
+            </div>
+    </div> 
+    </div>
+</nav>
+   
+    <section class="home mt-5">
+     <div class="container me-5 ">
+        <div class="row  me" >
+           
+               
+         
+        </div>
+         
+     </div>
+        <div class="container">
+            
+                <h3 class="text-center my-4">
+                    Total Price : <span class="price"></span>
+                </h3>
+            
+          <h2 class="text my-2">Favouite</h2>
+          <div class="lineText"></div>
+        
+        </div>
+    </section>   
+
+    <script src="./JS/carts.js"></script>
+    <script src="./JS/register.js"></script>
+    <script src="./JS/user.js"></script>
+    <script src="./JS/script.js"></script>
+    <script src="./JS/bootstrap.min.js"></script>
+</body>
+</html>
