@@ -13,24 +13,30 @@
 </head>
 <body>
     
-    <header>
-        <div class="container">
-         <div class="header-content">
-             <a href="index.html" class="brand text-info"> online shopping</a>
-             <nav>
-                
-                 <ul id="link">
-                    <li>
-                        <a href="login.html"> login </a>
-                    </li>
-                    <li>
-                        <a href="register.html">Register</a>
-                    </li>
-                </ul>
-             </nav>
-         </div>
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #ddd;">
+        <div class="left-header">
+            <a href="index.html" class="logo" style="font-size: 1.3rem;">Online Shopping </a>     
         </div>
-    </header> 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-secondary" style="font-size: 1.5rem;"></i> 
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+                <div class="userName" style="margin-left: 50%; transform: translate(-150%);">
+                    <!-- <p style="margin-bottom: 0;">Welcome <span id="user-name"></span></p> -->
+                 </div>
+          <div class="right-header ml-auto">
+                
+                <div class="logout-box">
+                    <a href="#" class="logIn">login</a>
+                </div>
+                <div class="logout-box">
+                    <a href="#" class="registre">Register</a>
+                </div>
+        </div> 
+        </div>
+    </nav>
     <div class="container mt-5 ">
         <div class="row ">
             <div class="col">
@@ -58,6 +64,7 @@
     </section>   
 
     <script src="./JS/register.js"></script>
+    <script src="./JS/login.js"></script>
     <script src="./JS/script.js"></script>
     <script src="./JS/user.js"></script>
     <script src="./JS/bootstrap.min.js"></script>

@@ -5,6 +5,8 @@ let cartsProduct = document.querySelector(".carts_products");
 const cart=document.querySelector('.cart')
 let favaourite = document.querySelector("#favouriteItems")
 let logout = document.querySelector(".logout")
+let logIn = document.querySelector(".logIn")
+let register = document.querySelector(".registre")
 let products =[
     {
         id:1,
@@ -125,7 +127,14 @@ function displayProduct()
 
 displayProduct()
 // ************************* Search *********************
-
+logIn.addEventListener('click',()=>{
+    localStorage.removeItem('log')
+    location.assign('login.html')
+})
+register.addEventListener('click',()=>{
+    
+    location.assign('register.html')
+})
 function searchProduct(Pvalue)
 {
     let hasala = " "
