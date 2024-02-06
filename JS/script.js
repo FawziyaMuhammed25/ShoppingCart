@@ -5,8 +5,8 @@ let cartsProduct = document.querySelector(".carts_products");
 const cart=document.querySelector('.cart')
 let favaourite = document.querySelector("#favouriteItems")
 let logout = document.querySelector(".logout")
-let logIn = document.querySelector(".logIn")
-let register = document.querySelector(".registre")
+// let logIn = document.querySelector(".logIn")
+// let register = document.querySelector(".registre")
 let products =[
     {
         id:1,
@@ -110,7 +110,7 @@ function displayProduct()
                             <h5>Category :${item.category}</h5>
                         </div>
                         <div class="product_item_action position-relative ">
-                            <button class="add_to_cart btn btn-info ms-5  mb-2" onclick="AddCarts(${item.id})" style="display:block;"> Add To Cart</button>
+                            <button class="add_to_cart btn btn-info ms-5  mb-2"  onclick="AddCarts(${item.id})" style="display:block;"> Add To Cart</button>
                             <button class="btn btn-danger d-none" id="${item.id}0000" onclick='removeItems(this.id)'> Remove from cart</button>
                             <a href="#" style="margin-left: auto; display: inline-block;" >
                             <i class="fas fa-heart" style="font-size: 1.5rem;" id="${item.id}00000" onclick='addFavourite(this.id)'></i>
@@ -127,13 +127,10 @@ function displayProduct()
 
 displayProduct()
 // ************************* Search *********************
-logIn.addEventListener('click',()=>{
+
+logout.addEventListener('click',()=>{
     localStorage.removeItem('log')
     location.assign('login.html')
-})
-register.addEventListener('click',()=>{
-    
-    location.assign('register.html')
 })
 function searchProduct(Pvalue)
 {
@@ -175,7 +172,7 @@ function searchProduct(Pvalue)
                   <h5>Category :${products[i].category}</h5>
               </div>
               <div class="product_item_action position-relative ">
-                  <button class="add_to_cart btn btn-info ms-5  mb-2"  > Add To Cart</button>
+                  <button class="add_to_cart btn btn-info ms-5  mb-2" id=${products[i].id} onclick="AddCarts(this.id)" > Add To Cart</button>
                   <i class="far fa-heart fav "></i>
               </div>
               </div>
@@ -211,10 +208,17 @@ if (addItem) {
     badge.innerHTML = addItem.length;
    
 }
+// logIn.addEventListener('click',()=>{
+//     location.assign('login.html')
+// })
+// register.addEventListener('click',()=>{
+    
+//     location.assign('register.html')
+// })
     if (localStorage.getItem("userFirstName")) {
         function AddCarts(pId) {
             let choosenItem = products.find((item) => item.id === pId);
-            //  console.log(choosenItem)
+             // console.log(choosenItem)
             favaourite.innerHTML += `<li>${choosenItem.Name}</li>`
             addItem = [...addItem , choosenItem]
             // console.log(addItem)
@@ -233,10 +237,7 @@ if (addItem) {
     }
   
 ///////////////////////////////////////////////////////////////////////////////////
-logout.addEventListener('click',()=>{
-    localStorage.removeItem('log')
-    location.assign('login.html')
-})
+
 
 function viewProduct(){
     location.assign('Cartproducts.html')

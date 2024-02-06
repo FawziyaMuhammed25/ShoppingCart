@@ -3,6 +3,15 @@ let userEmail = document.querySelector("#email");
 let getEmail = localStorage.getItem("email");
 let getPassword = localStorage.getItem("password");
 let loginBtn = document.querySelector("#sign_in");
+let logIn = document.querySelector(".logIn")
+let register = document.querySelector(".registre")
+logIn.addEventListener('click',()=>{
+    location.assign('login.html')
+})
+register.addEventListener('click',()=>{
+    
+    location.assign('register.html')
+})
 loginBtn.addEventListener("click" , function(e){
     e.preventDefault()
     if (userEmail.value === "" || userPassword.value === "") {
